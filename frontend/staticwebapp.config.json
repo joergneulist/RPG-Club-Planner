@@ -1,0 +1,14 @@
+{
+  "routes": [
+    {
+      "route": "/admin/*",
+      "allowedRoles": ["admin"]
+    }
+  ],
+  "responseOverrides": {
+    "401": {
+      "redirect": "/login",
+      "statusCode": 302
+    }
+  }
+}
