@@ -1,0 +1,47 @@
+{
+    "apiVersion": "2024-11-01-preview",
+    "id": "/subscriptions/6b226802-8b24-4836-af45-4ff4d7a315fb/resourceGroups/pnp-hofheim-dev/providers/Microsoft.Sql/servers/pnp-hofheim/databases/db-dev",
+    "name": "db-dev",
+    "type": "microsoft.sql/servers/databases",
+    "sku": {
+        "name": "GP_S_Gen5",
+        "tier": "GeneralPurpose",
+        "family": "Gen5",
+        "capacity": 2
+    },
+    "kind": "v12.0,user,vcore,serverless,freelimit",
+    "location": "germanywestcentral",
+    "tags": {},
+    "properties": {
+        "collation": "SQL_Latin1_General_CP1_CI_AS",
+        "maxSizeBytes": 34359738368,
+        "status": "Paused",
+        "databaseId": "6358fdb0-cb2b-4dfd-bb60-97dea35795ff",
+        "creationDate": "2026-02-23T16:51:17.347Z",
+        "currentServiceObjectiveName": "GP_S_Gen5_2",
+        "requestedServiceObjectiveName": "GP_S_Gen5_2",
+        "defaultSecondaryLocation": "germanynorth",
+        "catalogCollation": "SQL_Latin1_General_CP1_CI_AS",
+        "zoneRedundant": false,
+        "maxLogSizeBytes": 193273528320,
+        "earliestRestoreDate": "2026-02-23T16:54:40Z",
+        "readScale": "Disabled",
+        "currentSku": {
+            "name": "GP_S_Gen5",
+            "tier": "GeneralPurpose",
+            "family": "Gen5",
+            "capacity": 2
+        },
+        "autoPauseDelay": 60,
+        "currentBackupStorageRedundancy": "Local",
+        "requestedBackupStorageRedundancy": "Local",
+        "minCapacity": 0.5,
+        "pausedDate": "2026-02-23T17:07:08.39Z",
+        "maintenanceConfigurationId": "/subscriptions/6b226802-8b24-4836-af45-4ff4d7a315fb/providers/Microsoft.Maintenance/publicMaintenanceConfigurations/SQL_Default",
+        "isLedgerOn": false,
+        "isInfraEncryptionEnabled": false,
+        "useFreeLimit": true,
+        "freeLimitExhaustionBehavior": "AutoPause",
+        "availabilityZone": "NoPreference"
+    }
+}

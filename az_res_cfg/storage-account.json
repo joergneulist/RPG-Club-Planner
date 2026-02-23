@@ -1,0 +1,70 @@
+{
+    "apiVersion": "2025-06-01",
+    "id": "/subscriptions/6b226802-8b24-4836-af45-4ff4d7a315fb/resourceGroups/pnp-hofheim-dev/providers/Microsoft.Storage/storageAccounts/blobpnphofheimdev",
+    "name": "blobpnphofheimdev",
+    "type": "microsoft.storage/storageaccounts",
+    "sku": {
+        "name": "Standard_LRS",
+        "tier": "Standard"
+    },
+    "kind": "StorageV2",
+    "location": "germanywestcentral",
+    "tags": {},
+    "properties": {
+        "allowCrossTenantDelegationSas": false,
+        "dualStackEndpointPreference": {
+            "defaultDualStackEndpoints": false,
+            "publishIpv4Endpoint": false,
+            "publishIpv6Endpoint": false
+        },
+        "dnsEndpointType": "Standard",
+        "defaultToOAuthAuthentication": false,
+        "publicNetworkAccess": "Disabled",
+        "keyCreationTime": {
+            "key1": "2026-02-23T17:07:50.892Z",
+            "key2": "2026-02-23T17:07:50.892Z"
+        },
+        "allowCrossTenantReplication": false,
+        "privateEndpointConnections": [],
+        "minimumTlsVersion": "TLS1_2",
+        "allowBlobPublicAccess": false,
+        "allowSharedKeyAccess": true,
+        "networkAcls": {
+            "ipv6Rules": [],
+            "bypass": "AzureServices",
+            "virtualNetworkRules": [],
+            "ipRules": [],
+            "defaultAction": "Deny"
+        },
+        "supportsHttpsTrafficOnly": true,
+        "encryption": {
+            "requireInfrastructureEncryption": false,
+            "services": {
+                "file": {
+                    "keyType": "Account",
+                    "enabled": true,
+                    "lastEnabledTime": "2026-02-23T17:07:50.908Z"
+                },
+                "blob": {
+                    "keyType": "Account",
+                    "enabled": true,
+                    "lastEnabledTime": "2026-02-23T17:07:50.908Z"
+                }
+            },
+            "keySource": "Microsoft.Storage"
+        },
+        "accessTier": "Hot",
+        "provisioningState": "Succeeded",
+        "creationTime": "2026-02-23T17:07:50.798Z",
+        "primaryEndpoints": {
+            "dfs": "https://blobpnphofheimdev.dfs.core.windows.net/",
+            "web": "https://blobpnphofheimdev.z1.web.core.windows.net/",
+            "blob": "https://blobpnphofheimdev.blob.core.windows.net/",
+            "queue": "https://blobpnphofheimdev.queue.core.windows.net/",
+            "table": "https://blobpnphofheimdev.table.core.windows.net/",
+            "file": "https://blobpnphofheimdev.file.core.windows.net/"
+        },
+        "primaryLocation": "germanywestcentral",
+        "statusOfPrimary": "available"
+    }
+}

@@ -1,0 +1,52 @@
+{
+    "apiVersion": "2024-11-01",
+    "id": "/subscriptions/6b226802-8b24-4836-af45-4ff4d7a315fb/resourceGroups/pnp-hofheim-dev/providers/Microsoft.Web/staticSites/table-manager-dev",
+    "name": "table-manager-dev",
+    "type": "microsoft.web/staticsites",
+    "sku": {
+        "name": "Free",
+        "tier": "Free"
+    },
+    "location": "westeurope",
+    "tags": {},
+    "properties": {
+        "defaultHostname": "red-desert-01daeef03.1.azurestaticapps.net",
+        "repositoryUrl": "https://github.com/joergneulist/RPG-Club-Planner",
+        "branch": "dev",
+        "customDomains": [],
+        "stableInboundIP": "51.124.12.35",
+        "privateEndpointConnections": [],
+        "stagingEnvironmentPolicy": "Enabled",
+        "allowConfigFileUpdates": true,
+        "contentDistributionEndpoint": "https://content-am2.infrastructure.1.azurestaticapps.net",
+        "keyVaultReferenceIdentity": "SystemAssigned",
+        "userProvidedFunctionApps": null,
+        "linkedBackends": [],
+        "provider": "GitHub",
+        "enterpriseGradeCdnStatus": "Disabled",
+        "publicNetworkAccess": null,
+        "databaseConnections": [],
+        "trafficSplitting": {
+            "environmentDistribution": {
+                "default": 100
+            }
+        },
+        "targetResourceGroupResourceId": null,
+        "trialExpirationTimeUtc": null,
+        "prettyNameStatus": null,
+        "prettyName": null,
+        "prettyNameHostname": null,
+        "backendRegion": {
+            "regionName": null,
+            "status": null
+        },
+        "stagingEnvironmentRegion": null,
+        "deploymentAuthPolicy": "DeploymentToken",
+        "federatedIdentityTenantId": null,
+        "federatedIdentityClientId": null,
+        "federatedIdentitySubscriptionId": null,
+        "deploymentStorageAccountResourceId": null,
+        "deploymentStorageAccountReferenceIdentity": null,
+        "networkConfigurations": null
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "apiVersion": "2024-11-01-preview",
+    "id": "/subscriptions/6b226802-8b24-4836-af45-4ff4d7a315fb/resourceGroups/pnp-hofheim-dev/providers/Microsoft.Sql/servers/pnp-hofheim",
+    "name": "pnp-hofheim",
+    "type": "microsoft.sql/servers",
+    "kind": "v12.0",
+    "location": "germanywestcentral",
+    "tags": {},
+    "properties": {
+        "administratorLogin": "CloudSAb174a617",
+        "version": "12.0",
+        "state": "Ready",
+        "fullyQualifiedDomainName": "pnp-hofheim.database.windows.net",
+        "privateEndpointConnections": [],
+        "minimalTlsVersion": "1.2",
+        "publicNetworkAccess": "Disabled",
+        "administrators": {
+            "administratorType": "ActiveDirectory",
+            "principalType": "User",
+            "login": "joerg.neulist@live.de",
+            "sid": "643ea469-0c6f-40a0-b7ad-4a31cce6c5a0",
+            "tenantId": "4b137b15-1ae3-44de-83c6-e24ca202b1c6",
+            "azureADOnlyAuthentication": true
+        },
+        "restrictOutboundNetworkAccess": "Disabled",
+        "externalGovernanceStatus": "Disabled",
+        "retentionDays": -1
+    }
+}
