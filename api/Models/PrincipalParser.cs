@@ -9,13 +9,14 @@ namespace api.Models
     {
         private class ClientPrincipal
         {
-            public string IdentityProvider { get; set; }
-            public string UserId { get; set; }
-            public string UserDetails { get; set; }
-            public IEnumerable<string> UserRoles { get; set; }
+            public string IdentityProvider { get; set; } = "";
+            public string UserId { get; set; } = "";
+            public string UserDetails { get; set; } = "";
+            // Initialisiere mit einer leeren Sammlung, damit die Eigenschaft niemals null ist.
+            public IEnumerable<string> UserRoles { get; set; } = Array.Empty<string>();
         }
 
-        public static ClaimsPrincipal Parse(HttpRequestData req)
+        public static ClaimsPrincipal? Parse(HttpRequestData req)
         {
             var principal = new ClientPrincipal();
 
@@ -24,7 +25,18 @@ namespace api.Models
                 var data = headers.First();
                 var decoded = Convert.FromBase64String(data);
                 var json = Encoding.UTF8.GetString(decoded);
-                principal = JsonSerializer.Deserialize<ClientPrincipal>(json, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+
+                // Deserialisiere in eine temporäre Variable und ersetze nur, wenn non-null.
+                var deserialized = JsonSerializer.Deserialize<ClientPrincipal>(json, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+                if (deserialized != null)
+                {
+                    principal = deserialized;
+                }
+            }
+
+            if (principal == null || string.IsNullOrEmpty(principal.UserId))
+            {
+                return null;
             }
 
             var identity = new ClaimsIdentity(principal.IdentityProvider);

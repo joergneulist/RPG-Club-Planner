@@ -18,6 +18,13 @@ namespace api.Functions
         {
             // 1. Get Google ID from SWA Header
             var principal = PrincipalParser.Parse(req);
+            if (principal == null)
+            {
+                var unauthorizedResponse = req.CreateResponse(HttpStatusCode.Unauthorized);
+                await unauthorizedResponse.WriteStringAsync("Authentication failed: principal not found.");
+                return unauthorizedResponse;
+            }
+
             var googleId = principal.FindFirst(ClaimTypes.NameIdentifier)?.Value;
             var email = principal.FindFirst(ClaimTypes.Name)?.Value;
 
